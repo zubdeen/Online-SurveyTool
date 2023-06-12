@@ -1,5 +1,6 @@
 import Box from "./Box";
 import { useMemo } from "react";
+import { Link } from "react-router-dom";
 import ProfileSpace from "./ProfileSpace";
 import LanguageTab from "./LanguageTab";
 import home from "../public/assets/icons/Survey/home.svg";
@@ -42,13 +43,15 @@ const Sidebar = () => {
     []
   );
   return (
-    <div className="hidden md:flex flex-col gap-y-2 bg-[#ED6734] min-h-full max-w-[500px] h-screen  p-2 overflow-hidden">
+    <div className="hidden md:flex flex-col gap-y-2 bg-[#ED6734] min-h-full h-screen p-2 overflow-hidden">
       <ProfileSpace />
       <LanguageTab />
       <Box>
         <div className="flex flex-col gap-y-4 ">
           {routes.map((item) => (
-            <SidebarItem key={item.label} {...item} />
+            <Link key={item.label} to={item.href}>
+              <SidebarItem key={item.label} {...item} />
+            </Link>
           ))}
         </div>
       </Box>

@@ -8,11 +8,16 @@ const UserSurveyTab = () => {
         <p className="text-white cursor-pointer">show all</p>
       </div>
       <Box>
-        <div className="flex ">
-          <div id="dot" />
-          <h2>Food</h2>
+        <div className="flex items-center gap-10 my-5 p-3">
+          <div
+            id="dot"
+            className="rounded-full bg-[#5F4D86] h-[20px] w-[20px]"
+          />
+          <h2 className="text-2xl font-bold cursor-pointer hover:text-gray-300 transition text-[#F5F5F5]">
+            Food
+          </h2>
           <svg
-            className={`fill-current mr-3 w-10 transition-transform`}
+            className={`fill-white w-10 transition-transform translate-x-[190px]`}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
           >

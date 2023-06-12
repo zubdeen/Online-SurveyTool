@@ -21,7 +21,7 @@ const SidebarItem = ({ label, icon }) => {
       onBlur={handleBlur}
       tabIndex={0}
     >
-      <img src={icon} alt="icon" className="object-fit h-10 w-10" />
+      <img src={icon} alt="icon" className="object-fit min-w-[30px]" />
       <p className="truncate text-center font-bold text-2xl">{label}</p>
     </div>
   );
