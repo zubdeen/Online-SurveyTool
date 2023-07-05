@@ -1,6 +1,12 @@
 import Box from "./Box";
+import { useState } from "react";
 
 const UserSurveyTab = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleBoxClick = () => {
+    setIsOpen((prevState) => !prevState);
+  };
   return (
     <div className="m-7">
       <div className="flex items-center justify-between">
@@ -8,7 +14,12 @@ const UserSurveyTab = () => {
         <p className="text-white cursor-pointer">show all</p>
       </div>
       <Box>
-        <div className="flex items-center gap-10 my-5 p-3">
+        <div
+          className={`flex items-center gap-10 my-5 p-3 ${
+            isOpen ? "bg-brown" : ""
+          }`}
+          onClick={handleBoxClick}
+        >
           <div
             id="dot"
             className="rounded-full bg-[#5F4D86] h-[20px] w-[20px]"
